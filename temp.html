@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="tempc.css">
+</head>
+<body>
+    <h1>Employee Management System</h1>
+    
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Add Employee</a></li>
+            <li><a href="#">Edit Employee</a></li>
+            <li><a href="#">Delete Employee</a></li>
+            <li><a href="#">View All Employees</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main content section -->
+    <main>
+        <!-- Add Employee form -->
+        <form action="/add_employee" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name"><br />
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email"><br />
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- Edit Employee form -->
+        <form action="/edit_employee" method="post">
+            <label for="id">ID:</label>
+            <input type="number" name="id"><br />
+            
+            <label for="new_name">New Name:</label>
+            <input type="text" name="new_name"><br />
+            
+            <button type="submit">Update</button>
+        </form>
+        
+        <!-- Delete Employee form -->
+        <form action="/delete_employee" method="post">
+            <label for="del_id">ID:</label>
+            <input type="number" name="del_id"><br />
+            
+            <button type="submit">Delete</button>
+        </form>
+        
+        <!-- View all Employees table -->
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            <?php foreach ($employees as $emp): ?>
+                <tr>
+                    <td><?= $emp['id'] ?></td>
+                    <td><?= $emp['name'] ?></td>
+                    <td><?= $emp['email'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </main>
+</body>
+</html>

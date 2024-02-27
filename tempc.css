@@ -1,0 +1,79 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the header */
+header h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #555;
+    background-color: #eee;
+    padding: 10px;
+}
+
+/* Styles for the navbar */
+nav ul li {
+    display: inline-block;
+    float: left;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #999;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #ccc;
+}
+
+/* Styles for the main content section */
+main {
+    width: 80%;
+    margin: auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+/* Form styles */
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type='text'], form input[type='email'], form input[type='password'] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    outline: none;
+}
+
+form button {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Table styles */
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+table tr:last-child {
+    border-bottom: 2px solid #ddd;
+}
